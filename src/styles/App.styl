@@ -1,0 +1,44 @@
+html, body
+  width 100%
+  height 100%
+  margin: 0
+  font-family -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+          'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
+          'Pingfang SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei'
+
+#root
+  width 100%
+  height 100%
+  position relative
+
+.container
+  padding: 30px 20px
+  align-self: center
+  margin: auto
+
+.part-title
+  color: #555
+
+.page-title
+  font-size: 28px
+  font-weight: bold
+  margin: 15px 0px
+
+.page-description
+  font-size: 14px
+  padding: 5px 0px
+  color: #888
+
+make-container(minWidth, breakpoint) {
+  @media (min-width: minWidth) {
+    .container {
+      width: breakpoint;
+    }
+  }
+}
+
+make-container(576px, 90%);
+make-container(768px, 85%);
+make-container(992px, 85%);
+make-container(1200px, 80%);
+make-container(1600px, 80%); // Optional

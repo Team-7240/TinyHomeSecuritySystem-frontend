@@ -1,0 +1,61 @@
+.camera-lists
+  width: 100%
+  min-height: 300px
+  margin: 30px 0px
+  background: lighten(#eee, 50%)
+  border: 2px #888 dashed
+  position: relative
+  display: flex
+  flex-wrap: nowrap
+  justify-content: flex-start
+
+  .list-prompt
+    width: 100%
+    position: absolute
+    text-align: center
+    top: 50%
+    transform: translateY(-50%)
+    color: #888
+
+.camera-item-card
+  width: 300px
+  height: 120px
+  padding: 10px
+  margin: 20px
+  background: #bae7ff
+  border-radius: 10px
+  display: flex
+  position: relative
+  box-shadow: -6px 0px 16px rgba(0, 0, 0, 0.08)
+  .camera-item-info
+    width: calc(100% - 60px)
+  .camera-item-type
+    color: lighten(#000, 20%)
+  & p
+    width: calc(100% - 50px)
+    padding: 3px 10px
+    margin: 0px
+  .camera-item-icons
+    width: 50px
+    height: 100%
+    display: inline
+  .camera-item-icons svg
+    width: 50px
+    height: 50px
+  .camera-item-icons-address
+    width: 100%
+  .camera-item-name
+    width: 100%
+    border: 0px
+    border-bottom: 1px solid #888
+    margin: 5px 10px
+    outline: 0
+    display: none
+    background: transparent
+  &.selected
+    .camera-item-name
+      display: block
+  .camera-switch
+    position: absolute
+    top: 20px
+    right: 20px

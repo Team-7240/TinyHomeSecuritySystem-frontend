@@ -1,0 +1,45 @@
+.index-cameras-list
+  display: flex
+  flex-wrap: wrap
+.index-camera-item
+  width: 300px
+  height: 90px
+  padding: 15px
+  background: #eee
+  margin: 0px 20px 20px 0px
+  display: flex
+  transition: .3s all
+  position: relative
+  &.online
+    cursor: pointer
+  &.offline
+    background: lighten(#eee, 50%)
+  &.online:hover
+    background: darken(#eee, 10%)
+
+  .index-camera-icon
+    width: 50px
+    height: 50px
+    svg
+      width: 50px
+      height: 50px
+  .index-camera-info
+    width: calc(100% - 50px)
+    padding: 0px 20px
+    p
+      margin: 0px
+      margin-bottom :10px
+
+.index-camera-status
+  width: 10px
+  height: 10px
+  background: #888
+  border-radius: 50%
+  position: absolute
+  right: 20px
+  top: 20px
+
+  &.online
+    background: #95de64
+  &.offline
+    background: #a8071a
